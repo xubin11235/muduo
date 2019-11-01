@@ -1,13 +1,13 @@
-all:test
+all:link
 
 CC=g++
 CPPFLAGS=-Wall -std=c++11 -ggdb
 LDFLAGS=-pthread
 
-test:test.o
+link:link.o
 	$(CC) $(LDFLAGS) -o $@ $^
 
-test.o:test.cpp
+link.o:link.cpp
 	$(CC) $(CPPFLAGS) -o $@ -c $^
 
 
@@ -15,4 +15,4 @@ test.o:test.cpp
 	clean
 
 clean:
-	rm test.o test
+	rm *.o link

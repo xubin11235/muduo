@@ -1,6 +1,0 @@
-subject observer
-
-void Sub::attach(observer*) {
-    observer.register(this);
-    return
-}
