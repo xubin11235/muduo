@@ -1,13 +1,13 @@
-all:link
+all:sort
 
 CC=g++
 CPPFLAGS=-Wall -std=c++11 -ggdb
 LDFLAGS=-pthread
 
-link:link.o
+sort:sort.o
 	$(CC) $(LDFLAGS) -o $@ $^
 
-link.o:link.cpp
+sort.o:sort.cpp
 	$(CC) $(CPPFLAGS) -o $@ -c $^
 
 
@@ -15,4 +15,4 @@ link.o:link.cpp
 	clean
 
 clean:
-	rm *.o link
+	rm *.o sort
